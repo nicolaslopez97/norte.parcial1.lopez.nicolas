@@ -1,0 +1,71 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+h1 {
+    font-family: Verdana, Calibri, sans-serif;
+    font-size: 1.3em
+}
+
+h2 {
+    font-family: Verdana, Calibri, sans-serif;
+    font-size: 1.1em
+}
+
+span {
+    color: black;
+}
+
+
+/* --------------- layout ------------------------*/
+
+#container {
+    width: 100%;
+}
+
+header{
+    background-color:#286af0;
+    height: 40px;
+    padding-top:10px;
+}
+
+section {
+    background-color: #ccc;
+    overflow: auto;
+    float: right;
+    width: 80%;
+}
+
+aside {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+    background-color: #286af0;
+    text-align: center;
+    color: #ffffff;
+    text-decoration:underline;
+}
+
+#hubble{
+    width: 350px;
+    height: 350px;
+}
+
+#imgContainer {
+    margin-top: 40px;
+    text-align: center;
+}
