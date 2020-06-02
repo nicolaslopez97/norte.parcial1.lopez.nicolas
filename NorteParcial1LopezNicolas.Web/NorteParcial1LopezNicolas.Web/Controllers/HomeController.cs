@@ -13,5 +13,10 @@ namespace NorteParcial1LopezNicolas.Web.Models
         {
             return View();
         }
+
+        public ActionResult Cosmo()
+        {
+            return View();
+        }
     }
 }

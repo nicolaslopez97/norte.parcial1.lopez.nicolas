@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Cosmos";
+}
+
+<h2>Alta de constelaciones</h2>
+<br />
+<br />
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <th>Siglo:</th>
+                <td>
+                    <input id="txtSiglo" type="text" placeholder="Siglo de descubrimiento" />
+                </td>
+            </tr>
+            <tr>
+                <th>Nombre:</th>
+                <td>
+                    <input id="txtName" type="text" placeholder="Nombre de la constelación" />
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <input id="saveButton" type="button" value="Save" onclick="guardarValores()"/>
+                    <input id="listButton" type="button" value="Show list" onclick="listarValores()" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br />
+<br />
+
+<div id="resultado">
+        <p id="resultados"></p>
+</div>
+
+@section scripts{
+    <script>
+
+        var listaConstelaciones = new Array();
+
+        function Constelacion() {
+            this.setSiglo = function (value) { this._siglo = value; }
+            this.getSiglo = function () { return this._siglo; }
+
+            this.setNombre = function (value) { this._nombre = value; }
+            this.getNombre = function () { return this._nombre; }
+
+        }
+
+        function guardarValores() {
+
+            var constelacion = new Constelacion();
+
+            constelacion.setNombre(document.getElementById('txtName').value);
+            constelacion.setSiglo(document.getElementById('txtSiglo').value);
+
+            //limpio los valores despues de guardarlos
+            document.getElementById('txtName').value = '';
+            document.getElementById('txtSiglo').value = '';
+
+            listaConstelaciones.push(constelacion);
+        }
+
+        function listarValores() {
+
+            var row = "";
+
+            //Recorro las constelaciones que fui creando
+            for (var i = 0; i < listaConstelaciones.length; i++) {
+                row += listaConstelaciones[i].getNombre() + "      -       " + listaConstelaciones[i].getSiglo() + "<br />";
+                
+            }
+
+            //Las muestro en pantalla
+            document.getElementById('resultados').innerHTML = row;
+
+        }
+
+
+    </script>
+}

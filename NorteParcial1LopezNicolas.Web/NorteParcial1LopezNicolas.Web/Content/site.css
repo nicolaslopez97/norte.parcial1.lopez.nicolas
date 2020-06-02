@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
 }
@@ -32,19 +32,36 @@ span {
 
 #container {
     width: 100%;
+    margin: 0px auto;
+    
 }
 
-header{
-    background-color:#286af0;
-    height: 40px;
-    padding-top:10px;
+header {
+    background-color: #286af0;
+    padding-top: 10px;
 }
+
+    header nav ul {
+        padding: 10px;
+    }
+
+        header nav ul li {
+            text-decoration: none;
+            display: inline;
+        }
+        header nav ul li a {
+            font-size:20px;
+            text-decoration:none;
+            padding:10px;
+            color:#fff;
+        }
 
 section {
     background-color: #ccc;
     overflow: auto;
     float: right;
     width: 80%;
+    min-height: 700px;
 }
 
 aside {
@@ -57,10 +74,12 @@ footer {
     background-color: #286af0;
     text-align: center;
     color: #ffffff;
-    text-decoration:underline;
+    text-decoration: underline;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
-#hubble{
+#hubble {
     width: 350px;
     height: 350px;
 }
@@ -68,4 +87,17 @@ footer {
 #imgContainer {
     margin-top: 40px;
     text-align: center;
+}
+
+#tituloAside {
+    border: 1px solid red;
+    padding: 15px 0px;
+}
+
+aside article div {
+    margin: 10px;
+}
+
+#resultado{
+    margin-left: 5px;
 }
